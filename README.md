@@ -10,6 +10,7 @@ por parte del administrador  guardar empleados, implementar medicamentos, actual
 `-` Nueva Venta: venta de medicamentos.
 `-` Buscar producto: buscar precio de un producto y stock.
 `-` Receta.........
+
 `*` ADMINISTRADOR.
 `-` Agregar Cliente: registro de clientes para proximas compras  y un boton de actualizar para modificar cualquier campo
 `-` Nueva Venta: venta de medicamentos con campos modificables
