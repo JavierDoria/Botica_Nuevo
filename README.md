@@ -5,7 +5,7 @@ proyecto SISE
 **Sistema de ventas de una botica, en donde podremos controlar las ventas, meidcamentos en almacen, registrar usuarios, 
 por parte del administrador  guardar empleados, implementar medicamentos, actualizacion de medicamentos.**
 ## DESCRIPCION DE VENTANAS
-** EMPLEADOS.
+**EMPLEADOS.**
 
 `-` Agregar Cliente: registro de clientes para proximas compras. 
 
@@ -16,7 +16,7 @@ por parte del administrador  guardar empleados, implementar medicamentos, actual
 `-` Receta.........
 
 
-** ADMINISTRADOR.
+**ADMINISTRADOR.**
 
 `-` Agregar Cliente: registro de clientes para proximas compras  y un boton de actualizar para modificar cualquier campo.
 
