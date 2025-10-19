@@ -3,7 +3,6 @@
  */
 
 package com.sise.botica;
-import com.formdev.flatlaf.FlatDarkLaf;
 import com.sise.botica.ui.Login;
 import javax.swing.UIManager;
 /**
@@ -14,9 +13,8 @@ import javax.swing.UIManager;
 public class Main {
     public static void main(String[] args) {
     try {
-            UIManager.setLookAndFeel(new FlatDarkLaf());
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("FlatLaf Dark".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

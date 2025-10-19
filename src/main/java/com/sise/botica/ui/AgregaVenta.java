@@ -50,6 +50,7 @@ public class AgregaVenta extends javax.swing.JInternalFrame {
         }
     });
     }
+    //declaracion de metodos
     private void agregaProducto(int codigo, String producto, int  cantidad, double precio) {
         double total = cantidad * precio;
 

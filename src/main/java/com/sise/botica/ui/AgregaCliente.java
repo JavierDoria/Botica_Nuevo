@@ -18,7 +18,9 @@ public class AgregaCliente extends javax.swing.JInternalFrame {
     /**
      * Creates new form AgregaCliente
      */
+    //declaro variable modelo del tipo defaultModel
     DefaultTableModel modelo;
+    
     public AgregaCliente() {
         initComponents();
         modelo = new DefaultTableModel(
@@ -192,7 +194,7 @@ public class AgregaCliente extends javax.swing.JInternalFrame {
         String direccion = txtDireccion.getText();
         String correo = txtCorreo.getText();
         
-        if(nombre.isEmpty() || dni.isEmpty()|| direccion.isEmpty()||correo.isEmpty()){
+        if(nombre.trim().isEmpty() || dni.trim().isEmpty()|| direccion.trim().isEmpty()||correo.trim().isEmpty()){
             javax.swing.JOptionPane.showMessageDialog(this, "Faltan datos");
             return;
         }

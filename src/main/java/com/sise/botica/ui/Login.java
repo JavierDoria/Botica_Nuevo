@@ -4,6 +4,11 @@
  */
 package com.sise.botica.ui;
 
+import com.sise.botica.DAO.EmpleadoDAO;
+import com.sise.botica.DAO.LoginDAO;
+import com.sise.botica.models.EmpleadoAdm;
+import com.sise.config.Conexion_baseDatos;
+import java.sql.Connection;
 import javax.swing.JOptionPane;
 
 /**
@@ -100,27 +105,32 @@ public class Login extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         // TODO add your handling code here:
-        String usuario = txtNombreUsuario.getText();
-        String clave = txtClave.getText();
-        if(usuario.equals("admin") && clave.equals("admin")){
-            MenuPrincipalAdmin admin= new MenuPrincipalAdmin();
-            admin.setVisible(true);
+        String correo = txtNombreUsuario.getText().trim();
+        String contrasenia = new String(txtClave.getPassword());
+
+    if (correo.isEmpty() || contrasenia.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Ingrese correo y contraseña.");
+        return;
+    }
+
+    try {
+        LoginDAO logindao = new LoginDAO();
+        boolean acceso = logindao.login(correo, contrasenia);
+
+        if (acceso) {
+            JOptionPane.showMessageDialog(this, "Bienvenido");
+
+            // Abrir menú principal y pasarle el empleado logueado
+            MenuPrincipalAdmin menu = new MenuPrincipalAdmin();
+            menu.setVisible(true);
             this.dispose();
-        }else if (usuario.equals("trabajador") && clave.equals("trabajador")){
-            MenuPrincipal principal = new MenuPrincipal();
-            principal.setVisible(true);
-            this.dispose();
-        }else{
-            JOptionPane.showMessageDialog(this, 
-        "Usuario o contraseña incorrectos", 
-        "Error de inicio de sesión", 
-        JOptionPane.ERROR_MESSAGE);
-            
-        txtNombreUsuario.setText("");
-        txtClave.setText("");
-   
-        txtNombreUsuario.requestFocus();
+        } else {
+            JOptionPane.showMessageDialog(this, "Correo o contraseña incorrectos");
         }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error al iniciar sesión: " + e.getMessage());
+        e.printStackTrace();
+    }
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     /**
