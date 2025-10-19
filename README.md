@@ -4,32 +4,26 @@ proyecto SISE
 ## DETALLES DEL PROYECTO
 **Sistema de ventas de una botica, en donde podremos controlar las ventas, meidcamentos en almacen, registrar usuarios, 
 por parte del administrador  guardar empleados, implementar medicamentos, actualizacion de medicamentos.**
-## DESCRIPCION DE VENTANAS
-**EMPLEADOS.**
-
-`-` Agregar Cliente: registro de clientes para proximas compras. 
-
-`-` Nueva Venta: venta de medicamentos.
-
-`-` Buscar producto: buscar precio de un producto y stock.
-
-`-` Receta.........
 
 
-**ADMINISTRADOR.**
 
-`-` Agregar Cliente: registro de clientes para proximas compras  y un boton de actualizar para modificar cualquier campo.
+**FUNCIONALIDAD DEL SISTEMA.**
 
-`-` Nueva Venta: venta de medicamentos con campos modificables.
+`-` Agregar Cliente: Se registra un nuevo cliente "esto facilitara para la compra del cliente" donde podremos guardar, actualizar y buscar a un cliente determinado.
 
-`-` Buscar y agregar productos: buscar precio de un producto y stock con mapos modificables.
+`-` Nueva Venta: Venta de medicamentos, tan solo colocando el nombre del producto podremos ver el precio y stock, ademas buscaremos al cliente por su numero de DNI y poder hacer el pago, que nos generara una boleta.
 
-`-` Agregar Empleado: registro de nuevos trabajadores en el sistema de ventas.
+`-` Buscar y agregar productos: Buscar precio de un producto por medio de la descripcion "nombre". Ademas de poder agregar un producto y actualizarlo.
 
-`-` Receta.........
+`-` Agregar Empleado: En esta ventana podremos guardar actualizar, buscar y eliminar a un empleado, ademas podremos asignarle un cargo, ya sea administrador o empleado.
 
 ## VERSION DE JAVA
 **java version "24.0.1" 2025-04-15**
 ## NOMBRE Y CODIGO DE ESTUDIANTE
 **DORIA CRISOSTOMO, Javier**
 **2017488490**
+
+
+**DIAGRAMA ENTIDAD RELACION DE MI PROYECTO-BOTICA**
+<img width="1434" height="757" alt="image" src="https://github.com/user-attachments/assets/63441c5b-2fd6-48c9-a4f3-10fc6e11da92" />
+
